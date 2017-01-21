@@ -1,0 +1,30 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}济南住宅网签走势{% endblock %}
+
+{% block head %}
+{{ super() }}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vis.min.css') }}">
+
+<script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+<!--  VIS JavaScript -->
+<script src="{{ url_for('static', filename='vis.min.js') }}"></script>
+<script src="{{ url_for('static', filename='jnfdc.js') }}"></script>
+{% endblock head %}
+
+{% block body %}
+
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header text-center">济南住宅网签走势图</h1>
+  </div>
+</div>
+
+<div id="visualization"></div>
+{% endblock body %}
