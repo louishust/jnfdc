@@ -21,7 +21,7 @@ def fetch_data():
     from app.util.fetch import fetch_jnfdc
     while True:
         fetch_jnfdc()
-        time.sleep(300)
+        time.sleep(10)
 
 @manager.command
 def init_db():
