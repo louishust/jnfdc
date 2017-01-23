@@ -20,7 +20,9 @@ def fetch_data():
     """Fetch jnfdc data"""
     from app.util.fetch import fetch_jnfdc
     while True:
-        fetch_jnfdc()
+        now = time.localtime()
+        if now.tm_hour >= 8 and now.tm_hour <= 22:
+            fetch_jnfdc()
         time.sleep(60)
 
 @manager.command
