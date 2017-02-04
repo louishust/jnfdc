@@ -28,7 +28,7 @@ $(function() {
       var item = {};
       item.x = row.date;
       item.y = row.signnum;
-      var label = {'content' : row.signnum};
+      var label = {'content' : row.signnum.toString()};
       item.label = label;
       items.push(item);
     });
