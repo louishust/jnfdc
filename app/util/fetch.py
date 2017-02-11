@@ -2,6 +2,7 @@ from lxml import html
 import requests
 from ..models import NetSign
 from datetime import date
+from datetime import datetime
 
 def fetch_jnfdc():
     try:
@@ -13,6 +14,7 @@ def fetch_jnfdc():
             netsign = NetSign(signnum = int(sn), date = date.today())
         else:
             netsign.signnum = int(sn)
+        print("{0}:{1}".format(datetime.now(), sn))
         netsign.add()
     except Exception:
         pass
